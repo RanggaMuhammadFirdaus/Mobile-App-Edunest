@@ -23,8 +23,8 @@
 <!-- Search & Menu -->
 <div class="flex items-center gap-3 mb-6">
   <input type="text" placeholder="Cari kelas"
-         class="flex-1 px-4 py-2 rounded-full border border-gray-300 shadow-sm focus:outline-none"/>
-  <button class="w-10 h-10 rounded-xl border-2 border-black flex items-center justify-center shadow-md">
+         class=" flex-1 px-4 py-2 rounded-full border border-gray-300 focus:outline-none font-semibold text-sm px-5 py-2 rounded-[20px] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"/>
+  <button class="w-10 h-10 rounded-xl border-2 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] ">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="black">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16"/>
@@ -34,7 +34,7 @@
 
 <!-- Progres Kelas -->
 <h2 class="font-bold text-base mb-2">Progres Kelas Hari Ini</h2>
-<div class="p-4 border-2 border-black rounded-xl shadow-md mb-6">
+<div class="p-4 border-2 border-black rounded-xl mb-6 font-semibold text-sm px-5 py-2 rounded-[20px] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
   <div class="flex items-center gap-3 mb-2">
     <img src="https://img.icons8.com/ios-filled/50/000000/python.png" class="w-10 h-10" />
     <div>
@@ -51,11 +51,16 @@
 <!-- Kategori -->
 <div class="flex items-center justify-between mb-2">
   <h2 class="font-bold text-base">Kategori</h2>
-  <a href="#" class="text-sm text-gray-600">Lihat Semua</a>
+  <a href="#" class="text-sm text-gray-500 hover:underline">Lihat Semua</a>
 </div>
+
 <div class="flex gap-3 mb-6">
-  <span class="bg-red-400 px-4 py-1 rounded-xl text-white font-medium text-sm shadow-md">Pemrograman</span>
-  <span class="bg-yellow-300 px-4 py-1 rounded-xl text-black font-medium text-sm shadow-md">Desain Grafis</span>
+  <span class=" cursor-pointer transition-all hover:translate-y-1 hover:shadow-lg bg-red-500 text-white font-semibold text-sm px-5 py-2 rounded-[20px] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+    Pemrograman
+  </span>
+  <span class="cursor-pointer transition-all hover:translate-y-1 hover:shadow-lg bg-yellow-300 text-black font-semibold text-sm px-5 py-2 rounded-[20px] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+    Desain Grafis
+  </span>
 </div>
 
 <!-- Kelas Populer -->
@@ -66,28 +71,52 @@
 
 <div class="flex gap-4 overflow-x-scroll pb-2">
   <!-- Card 1 -->
-  <div class="w-48 rounded-xl border-2 border-black shadow-md">
-    <img src="https://source.unsplash.com/featured/?keyboard" class="rounded-t-xl w-full h-24 object-cover" />
+  <div class="w-48 rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+    <div class="relative">
+    <img src="img/java.png" class="rounded-t-xl w-full h-24 object-cover" />
+    <button class="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md hover:scale-110 transition">
+        ❤️
+      </button>
+    </div>
     <div class="p-2">
       <h3 class="font-bold text-sm">Java Pemula</h3>
       <div class="flex justify-between items-center text-xs text-gray-500 mt-1">
-        <span>⏱️ 5 jam</span>
-        <span>👤 41</span>
+        <div class="flex items-center gap-1">
+          ⏱️ <span>18 jam</span>
+        </div>        
+      </div>
+      <div class="flex justify-between items-center text-xs text-gray-500 mt-1">
+        <div class="flex items-center gap-1">
+          ⭐ <span>4.7</span>
+        </div>
       </div>
       <span class="text-[10px] bg-orange-200 px-2 py-0.5 rounded-full mt-1 inline-block">Pemrograman</span>
+      <span class="text-[10px] bg-orange-400 text-white px-1 py-0.5 rounded-full font-semibold shadow">Rp.160.000</span>
     </div>
   </div>
 
   <!-- Card 2 -->
-  <div class="w-48 rounded-xl border-2 border-black shadow-md">
-    <img src="https://source.unsplash.com/featured/?coding" class="rounded-t-xl w-full h-24 object-cover" />
+  <div class="w-48 rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+    <div class="relative">
+    <img src="img/python.png" class="rounded-t-xl w-full h-24 object-cover" />
+    <button class="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md hover:scale-110 transition">
+        ❤️
+      </button>
+    </div>
     <div class="p-2">
-      <h3 class="font-bold text-sm">Python Dasar</h3>
+      <h3 class="font-bold text-sm">Java Pemula</h3>
       <div class="flex justify-between items-center text-xs text-gray-500 mt-1">
-        <span>⏱️ 6 jam</span>
-        <span>👤 50</span>
+        <div class="flex items-center gap-1">
+          ⏱️ <span>18 jam</span>
+        </div>        
+      </div>
+      <div class="flex justify-between items-center text-xs text-gray-500 mt-1">
+        <div class="flex items-center gap-1">
+          ⭐ <span>4.7</span>
+        </div>
       </div>
       <span class="text-[10px] bg-orange-200 px-2 py-0.5 rounded-full mt-1 inline-block">Pemrograman</span>
+      <span class="text-[10px] bg-orange-400 text-white px-1 py-0.5 rounded-full font-semibold shadow">Rp.120.000</span>
     </div>
   </div>
 </div>
@@ -114,5 +143,12 @@
 </button>
 </div>
 
+<script>
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.textContent = btn.textContent === "❤️" ? "💔" : "❤️";
+    });
+  });
+</script>
 </body>
 </html>
