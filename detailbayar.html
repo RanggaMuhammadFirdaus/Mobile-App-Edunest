@@ -47,56 +47,142 @@
     class="w-full px-4 py-2 rounded-full border border-black shadow-[4px_4px_0px_0px_#000000] mb-6" />
 
   <!-- BANK SECTION -->
-  <div class="bg-[#4ade80] p-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] mb-6">
-    <p class="font-bold text-black mb-4">Bank</p>
-    <div class="space-y-4">
-      <div class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
-        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/8/86/BANK_CENTRAL_ASIA.svg/320px-BANK_CENTRAL_ASIA.svg.png" class="h-6" alt="BCA">
-      </div>
-      <div class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Bank_Mandiri_logo.svg/320px-Bank_Mandiri_logo.svg.png" class="h-6" alt="Mandiri">
-      </div>
-      <div class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/BNI_logo.svg/320px-BNI_logo.svg.png" class="h-6" alt="BNI">
-      </div>
-    </div>
+<div class="bg-[#4ade80] p-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] mb-6">
+  <p class="font-bold text-black mb-4">Bank</p>
+  <div class="space-y-4">
+    <button onclick="openPopup()" class="w-full bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
+      <img src="https://upload.wikimedia.org/wikipedia/id/thumb/8/86/BANK_CENTRAL_ASIA.svg/320px-BANK_CENTRAL_ASIA.svg.png" class="h-6" alt="BCA">
+    </button>
+    <button onclick="openPopup()" class="w-full bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Bank_Mandiri_logo.svg/320px-Bank_Mandiri_logo.svg.png" class="h-6" alt="Mandiri">
+    </button>
+    <button onclick="openPopup()" class="w-full bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/BNI_logo.svg/320px-BNI_logo.svg.png" class="h-6" alt="BNI">
+    </button>
   </div>
+</div>
 
-  <!-- E-WALLET SECTION -->
-  <div class="bg-[#f43f5e] p-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] mb-6">
-    <p class="font-bold text-white mb-4">E-Wallet</p>
-    <div class="space-y-4">
-      <div class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
-        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/6b/Logo_dana_blue.svg/2560px-Logo_dana_blue.svg.png" class="h-6" alt="Dana">
+  <!-- POPUP FORM (Slide Up) -->
+<div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-end justify-center hidden z-50 transition-all duration-300"
+     onclick="handleOutsideClick(event)">
+  <div id="popupContent" class="bg-white rounded-t-2xl border-2 border-black shadow-[6px_-6px_0px_#000000] p-6 w-full max-w-md transform translate-y-full transition-transform duration-300">
+    <form class="space-y-4">
+      <div>
+        <label class="font-bold">Nama Pemilik Kartu</label>
+        <input type="text" placeholder="ANDI SETIAWAN"
+               class="w-full mt-1 px-4 py-2 border-2 border-black rounded-full shadow-[4px_4px_0px_#000000] placeholder-gray-400" />
       </div>
-      
-      <div class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
-        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/6b/Logo_gopay_blue.svg/2560px-Logo_gopay_blue.svg.png" class="h-6" alt="Gopay">
+      <div>
+        <label class="font-bold">Nomor Kartu Debit</label>
+        <input type="text" placeholder="1234 5678 9012 3456"
+               class="w-full mt-1 px-4 py-2 border-2 border-black rounded-full shadow-[4px_4px_0px_#000000] placeholder-gray-400" />
       </div>
-
-      <!-- Tambahkan lebih banyak e-wallet jika ingin -->
-    </div>
-  </div>
-
-  <!-- QRIS SECTION -->
-    <div class="bg-[#facc15] p-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] mb-6">
-    <p class="font-bold text-black text-sm mb-2">Qris</p>
+      <div>
+        <label class="font-bold">Tanggal Kedaluwarsa</label>
+        <input type="text" placeholder="MM/YY"
+               class="w-full mt-1 px-4 py-2 border-2 border-black rounded-full shadow-[4px_4px_0px_#000000] placeholder-gray-400" />
+      </div>
+      <div>
+        <label class="font-bold">CVV / CVC</label>
+        <input type="text" placeholder="123"
+               class="w-full mt-1 px-4 py-2 border-2 border-black rounded-full shadow-[4px_4px_0px_#000000] placeholder-gray-400" />
+      </div>
+      <button type="submit"
+              class="w-full bg-[#34a397] text-black font-bold py-2 rounded-full border-2 border-black shadow-[4px_4px_0px_#000000]">
+        Konfirmasi
+      </button>
+      <button onclick="closePopup()"
+            class="mb-4 text-sm text-center w-full text-red-500 font-semibold">Batal</button>
+    </form>
     
-    <div class="bg-white px-6 py-3 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-center">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_QRIS.svg/512px-Logo_QRIS.svg.png"
-            alt="QRIS" class="h-6" />
+  </div>
+</div>
+
+ <!-- E-WALLET SECTION -->
+<div class="bg-[#f43f5e] p-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] mb-6">
+  <p class="font-bold text-white mb-4">E-Wallet</p>
+  <div class="space-y-4">
+    <!-- Dana -->
+    <div onclick="openWalletPopup()" class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between cursor-pointer">
+      <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/6b/Logo_dana_blue.svg/2560px-Logo_dana_blue.svg.png" class="h-6" alt="Dana">
     </div>
+
+    <!-- Gopay -->
+    <div onclick="openWalletPopup()" class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between cursor-pointer">
+      <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/6b/Logo_gopay_blue.svg/2560px-Logo_gopay_blue.svg.png" class="h-6" alt="Gopay">
     </div>
+  </div>
+</div>
+
+<!-- POPUP E-WALLET -->
+<div id="walletPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-end justify-center hidden z-50 transition-all duration-300"
+     onclick="handleWalletOutsideClick(event)">
+  <div id="walletPopupContent"
+       class="bg-white rounded-t-2xl border-2 border-black shadow-[6px_-6px_0px_#000000] p-6 w-full max-w-md transform translate-y-full transition-transform duration-300">
+    <form class="space-y-4">
+      <div>
+        <label class="font-bold block mb-1">No Telp</label>
+        <input type="text" placeholder="08xxxxxxxxxx"
+               class="w-full px-4 py-2 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] placeholder-gray-400 focus:outline-none" />
+      </div>
+      <button type="submit" class="w-full bg-[#2e8b75] text-white font-bold py-2 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000]">
+        Gunakan E-Wallet ini
+      </button>
+    </form>
+
+    <!-- Catatan -->
+    <div class="mt-4 p-4 border-2 border-black rounded-xl shadow-[4px_4px_0px_#000000] bg-white">
+      <p class="font-bold"><span class="text-yellow-500">⚠️</span> Catatan Tambahan</p>
+      <ul class="text-sm text-yellow-500 mt-2 space-y-1">
+        <li>“Pastikan nomor aktif dan memiliki saldo cukup”</li>
+        <li>“Anda akan diarahkan ke aplikasi e-wallet untuk konfirmasi”</li>
+      </ul>
+    </div>
+
+    <button onclick="closeWalletPopup()" class="mt-4 text-sm text-center w-full text-red-500 font-semibold">Batal</button>
+  </div>
+</div>
+
+<!-- QRIS SECTION -->
+<div class="bg-[#facc15] p-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] mb-6">
+  <p class="font-bold text-black text-sm mb-2">Qris</p>
+
+  <div onclick="openQrisPopup()" class="bg-white px-6 py-3 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-center cursor-pointer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_QRIS.svg/512px-Logo_QRIS.svg.png"
+         alt="QRIS" class="h-6" />
+  </div>
+</div>
+
+<!-- POPUP QRIS -->
+<div id="qrisPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-end justify-center hidden z-50"
+     onclick="handleQrisOutsideClick(event)">
+  <div id="qrisPopupContent"
+       class="bg-white rounded-t-2xl border-2 border-black shadow-[6px_-6px_0px_#000000] p-6 w-full max-w-md transform translate-y-full transition-transform duration-300">
+    
+    <div class="border-2 border-black rounded-xl shadow-[4px_4px_0px_#000000] p-4 flex flex-col items-center bg-white">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=RP200000" alt="QR Code" class="w-40 h-40 mb-4" />
+      <p class="font-bold text-black">Total Pembayaran: <span class="ml-2">Rp200.000</span></p>
+    </div>
+
+    <!-- Catatan -->
+    <div class="mt-4 p-4 border-2 border-black rounded-xl shadow-[4px_4px_0px_#000000] bg-white">
+      <p class="font-bold"><span class="text-yellow-500">⚠️</span> Catatan Tambahan</p>
+      <p class="text-yellow-500 text-sm mt-2">“QR hanya berlaku selama 15 menit”</p>
+    </div>
+
+    <button onclick="closeQrisPopup()" class="mt-4 text-sm text-center w-full text-red-500 font-semibold">Batal</button>
+  </div>
+</div>
 
 
   <!-- Spacer agar konten tidak tertutup bottom nav -->
   <div class="h-16"></div>
 
 <!-- Bottom Nav -->
-<div class="fixed bottom-0 left-0 w-full bg-white border-t border-black flex justify-around py-2 shadow-inner z-50">
+<div class="fixed bottom-0 left-0 w-full bg-white border-t border-black flex justify-around py-1 shadow-inner z-50">
 
   <!-- Beranda -->
-  <button class="flex flex-col items-center bg-[#ef4444] text-black font-medium px-6 rounded-full shadow-[2px_2px_0px_0px_black] border-2 border-black -mt-1">
+  <button class="flex flex-col items-center bg-[#ef4444] text-black font-medium px-4 rounded-full shadow-[1px_1px_0px_0px_black] border-1 border-black -mt2">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9v8a2 2 0 01-2 2h-4v-6H9v6H5a2 2 0 01-2-2z" />
     </svg>
@@ -128,6 +214,78 @@
       // btn.textContent = btn.textContent === "❤️" ? "💔" : "❤️";
     });
   });
+function openPopup() {
+    const popup = document.getElementById("popup");
+    const popupContent = document.getElementById("popupContent");
+
+    popup.classList.remove("hidden");
+    // Beri delay agar transisi berjalan
+    setTimeout(() => {
+      popupContent.classList.remove("translate-y-full");
+    }, 10);
+  }
+
+  function closePopup() {
+    const popup = document.getElementById("popup");
+    const popupContent = document.getElementById("popupContent");
+
+    popupContent.classList.add("translate-y-full");
+    setTimeout(() => {
+      popup.classList.add("hidden");
+    }, 300); // Sesuai durasi animasi
+  }
+
+  function handleOutsideClick(event) {
+    const popupContent = document.getElementById("popupContent");
+    // Jika klik terjadi di luar konten popup, tutup popup
+    if (!popupContent.contains(event.target)) {
+      closePopup();
+    }
+  }
+
+  //pop up e-wallet
+   function openWalletPopup() {
+    const popup = document.getElementById("walletPopup");
+    const content = document.getElementById("walletPopupContent");
+    popup.classList.remove("hidden");
+    setTimeout(() => content.classList.remove("translate-y-full"), 10);
+  }
+
+  function closeWalletPopup() {
+    const popup = document.getElementById("walletPopup");
+    const content = document.getElementById("walletPopupContent");
+    content.classList.add("translate-y-full");
+    setTimeout(() => popup.classList.add("hidden"), 300);
+  }
+
+  function handleWalletOutsideClick(event) {
+    const popupContent = document.getElementById("walletPopupContent");
+    if (!popupContent.contains(event.target)) {
+      closeWalletPopup();
+    }
+  } 
+
+   // QRIS Popup
+  function openQrisPopup() {
+    const popup = document.getElementById("qrisPopup");
+    const content = document.getElementById("qrisPopupContent");
+    popup.classList.remove("hidden");
+    setTimeout(() => content.classList.remove("translate-y-full"), 10);
+  }
+
+  function closeQrisPopup() {
+    const popup = document.getElementById("qrisPopup");
+    const content = document.getElementById("qrisPopupContent");
+    content.classList.add("translate-y-full");
+    setTimeout(() => popup.classList.add("hidden"), 300);
+  }
+
+  function handleQrisOutsideClick(event) {
+    const popupContent = document.getElementById("qrisPopupContent");
+    if (!popupContent.contains(event.target)) {
+      closeQrisPopup();
+    }
+  }
 </script>
 </body>
 </html>
