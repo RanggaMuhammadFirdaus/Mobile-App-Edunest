@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Kursus - Web Pemula</title>
+
+  <!-- Font (Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Font Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          boxShadow: {
+            custom: '4px 4px 0 0 black',
+            strong: '8px 8px 0 0 #ef4444',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#f8fafc] min-h-screen relative pb-20">
+
+  <!-- Header -->
+   <a href="class.html">
+  <div class="flex justify-between items-center p-4">
+    <button class="bg-white border-2 border-black shadow-custom p-2 rounded-xl">
+      ←
+    </button>       
+  </div>
+  </a>
+
+  <!-- 1) Ilustrasi & Judul -->
+  <div class="flex flex-col items-center px-6 mt-6">
+    <img src="img/webpemula.jpg" 
+         alt="Pembayaran Berhasil" 
+         class="w-48 h-auto rounded-lg mb-4" />
+    <h2 class="text-lg font-bold text-gray-900">Pembayaran Berhasil</h2>
+    <p class="text-sm text-gray-700 text-center mt-2">
+      Pembayaran Anda telah berhasil diproses.<br>
+      Anda sekarang dapat mengakses materi kursus.
+    </p>
+  </div>
+
+  <!-- 2) Detail Transaksi -->
+  <div class="bg-white rounded-xl border-2 border-black shadow-custom mx-4 my-6 p-4">
+    <h3 class="font-semibold text-gray-900 mb-4">Detail Transaksi</h3>
+    <div class="grid grid-cols-2 gap-y-2 text-sm text-gray-800">
+      <span class="font-semibold">Kursus Pengantar Ilmu Data</span>
+      <span class="text-right">Rp. 750.000</span>
+
+      <span class="font-semibold">Jumlah</span>
+      <span class="text-right">Rp. 750.000</span>
+
+      <span class="font-semibold">Tanggal</span>
+      <span class="text-right">26 Mei 2025</span>
+
+      <span class="font-semibold">ID Transaksi</span>
+      <span class="text-right">TXN1234567890</span>
+    </div>
+  </div>
+
+  <!-- 3) Tombol Pergi ke Kursus -->
+  <div class="px-6">
+    <a href="class.html"
+       class="block w-full text-center bg-green-700 text-white font-semibold 
+              py-3 rounded-full border-2 border-black shadow-custom">
+      Pergi ke Kursus
+    </a>
+  </div>
+
+  <!-- Bottom Nav -->
+<div class="fixed bottom-0 left-0 w-full bg-white border-t border-black flex justify-around py-2 shadow-inner">
+    <button class="flex flex-col items-center text-pink-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 3.172l5 5V16a1 1 0 01-1 1h-2v-4H8v4H6a1 1 0 01-1-1V8.172l5-5z"/>
+      </svg>
+    </button>
+    <!-- Tengah: Love -->
+  <button class="flex flex-col items-center text-gray-500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+    </svg>
+  </button>
+  <!-- Kanan: User (sesuai ikon kamu) -->
+  <button class="flex flex-col items-center text-gray-500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+    </svg>
+  </button>
+  </div>
+
+</body>
+</html>
