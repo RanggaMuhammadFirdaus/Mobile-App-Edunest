@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Kelas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+   <!-- Custom Font Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          boxShadow: {
+            custom: '4px 4px 0 0 black',
+            strong: '8px 8px 0 0 #ef4444',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-black font-sans px-4 py-2 ">
+
+    <!-- Header -->
+   <a href="class.html">
+  <div class="flex justify-between items-center p-4">
+    <button class="bg-white border-2 border-black shadow-custom p-2 rounded-xl">
+      ←
+    </button>
+    <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-10 h-10 rounded-full border-2 border-black" alt="Profile" />
+  </div>
+  </a>
+
+  <!-- Judul & Info -->
+  <h2 class="text-lg font-bold">Web Pemula</h2>
+  <p class="text-sm text-gray-500">Mulai dari 20 Mei 2025 – Desember 2027</p>
+  <hr>
+  <p class="mt-1 font-semibold text-sm">Total Harga</p>
+  <p class="text-red-600 font-bold text-xl mb-4">Rp.160,000</p>
+
+  <!-- Search Metode -->
+  <input type="text" placeholder="Cari Metode Bayar"
+    class="w-full px-4 py-2 rounded-full border border-black shadow-[4px_4px_0px_0px_#000000] mb-6" />
+
+  <!-- BANK SECTION -->
+  <div class="bg-[#4ade80] p-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] mb-6">
+    <p class="font-bold text-black mb-4">Bank</p>
+    <div class="space-y-4">
+      <div class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
+        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/8/86/BANK_CENTRAL_ASIA.svg/320px-BANK_CENTRAL_ASIA.svg.png" class="h-6" alt="BCA">
+      </div>
+      <div class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Bank_Mandiri_logo.svg/320px-Bank_Mandiri_logo.svg.png" class="h-6" alt="Mandiri">
+      </div>
+      <div class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/BNI_logo.svg/320px-BNI_logo.svg.png" class="h-6" alt="BNI">
+      </div>
+    </div>
+  </div>
+
+  <!-- E-WALLET SECTION -->
+  <div class="bg-[#f43f5e] p-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] mb-6">
+    <p class="font-bold text-white mb-4">E-Wallet</p>
+    <div class="space-y-4">
+      <div class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
+        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/6b/Logo_dana_blue.svg/2560px-Logo_dana_blue.svg.png" class="h-6" alt="Dana">
+      </div>
+      
+      <div class="bg-white px-4 py-2 rounded-lg border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-between">
+        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/6b/Logo_gopay_blue.svg/2560px-Logo_gopay_blue.svg.png" class="h-6" alt="Gopay">
+      </div>
+
+      <!-- Tambahkan lebih banyak e-wallet jika ingin -->
+    </div>
+  </div>
+
+  <!-- QRIS SECTION -->
+    <div class="bg-[#facc15] p-4 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] mb-6">
+    <p class="font-bold text-black text-sm mb-2">Qris</p>
+    
+    <div class="bg-white px-6 py-3 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_QRIS.svg/512px-Logo_QRIS.svg.png"
+            alt="QRIS" class="h-6" />
+    </div>
+    </div>
+
+
+  <!-- Spacer agar konten tidak tertutup bottom nav -->
+  <div class="h-16"></div>
+
+<!-- Bottom Nav -->
+<div class="fixed bottom-0 left-0 w-full bg-white border-t border-black flex justify-around py-2 shadow-inner">
+  <button class="flex flex-col items-center text-pink-600">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 3.172l5 5V16a1 1 0 01-1 1h-2v-4H8v4H6a1 1 0 01-1-1V8.172l5-5z"/>
+    </svg>
+  </button>
+  <!-- Tengah: Love -->
+<button class="flex flex-col items-center text-gray-500">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+  </svg>
+</button>
+<!-- Kanan: User (sesuai ikon kamu) -->
+<button class="flex flex-col items-center text-gray-500">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+  </svg>
+</button>
+</div>
+
+<script>
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.textContent = btn.textContent === "❤️" ? "💔" : "❤️";
+    });
+  });
+</script>
+</body>
+</html>
