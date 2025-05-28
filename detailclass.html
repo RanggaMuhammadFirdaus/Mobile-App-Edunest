@@ -32,12 +32,12 @@
 
   <!-- Header -->
    <a href="class.html">
-  <div class="flex justify-between items-center p-4">
-    <button class="bg-white border-2 border-black shadow-custom p-2 rounded-xl">
-      ←
-    </button>
-    <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-10 h-10 rounded-full border-2 border-black" alt="Profile" />
-  </div>
+    <div class="sticky top-0 z-50 flex justify-between items-center p-4 bg-white border-b border-gray-200">
+      <button class="bg-white border-2 border-black shadow-custom p-2 rounded-xl">
+        ←
+      </button>
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-10 h-10 rounded-full border-2 border-black" alt="Profile" />
+    </div>
   </a>
 
   <!-- Course Image -->
@@ -95,15 +95,12 @@
 <div class="px-4 mt-6">
   <div class="border-2 border-black shadow-custom p-4">
     <p class="text-2xl font-extrabold text-[#0f172a] mb-4">Rp 160,000</p>
-    
-    <a href="pemesanan.html" class="block w-full">
+
+    <a href="pemesanan.html">
       <button class="w-full bg-[#ef4444] text-white font-semibold py-3 rounded shadow-custom border-2 border-black mb-3">
         Daftar Kelas Sekarang
       </button>
-
-    <button class="w-full bg-white text-black font-semibold py-3 rounded shadow-custom border-2 border-black">
-      Coba Gratis 7 Hari
-    </button>
+      </a>
   </div>
 </div>
 
@@ -152,24 +149,20 @@
     Konten <span class="text-[#ef4444]">Kursus</span>
   </h2>
 
-  <!-- Modul 1 -->
   <div class="border-2 border-black shadow-[4px_4px_0px_#000000] mb-4 p-4">
-    <div class="flex items-center justify-between cursor-pointer">
+    <div id="modul1Header" class="flex items-center justify-between cursor-pointer">
       <div class="flex items-center gap-4">
         <div class="bg-[#ef4444] text-white font-bold px-3 py-1 rounded-sm">1</div>
         <h3 class="font-bold text-[#0f172a]">Pengenalan Web Development</h3>
       </div>
-      <span>⌃</span>
-    </div>
+      <span id="modul1Icon" class="transform transition-transform duration-300">⌄</span> </div>
 
-    <!-- Table -->
-    <div class="mt-4">
+    <div id="modul1Content" class="mt-4 hidden"> 
       <div class="grid grid-cols-[40px_1fr_80px] text-sm font-semibold text-gray-600 border-b pb-2">
         <div>No.</div>
         <div>Judul Materi</div>
         <div>Durasi</div>
       </div>
-      <!-- Baris 1 -->
       <div class="grid grid-cols-[40px_1fr_80px] py-3 border-b text-sm">
         <div>1</div>
         <div class="flex items-center gap-2">
@@ -177,7 +170,6 @@
         </div>
         <div>15 menit</div>
       </div>
-      <!-- Baris 2 -->
       <div class="grid grid-cols-[40px_1fr_80px] py-3 border-b text-sm">
         <div>2</div>
         <div class="flex items-center gap-2">
@@ -185,7 +177,6 @@
         </div>
         <div>20 menit</div>
       </div>
-      <!-- Baris 3 -->
       <div class="grid grid-cols-[40px_1fr_80px] py-3 text-sm">
         <div>3</div>
         <div class="flex items-center gap-2">
@@ -196,28 +187,77 @@
     </div>
   </div>
 
-  <!-- Modul 2 -->
   <div class="border-2 border-black shadow-[4px_4px_0px_#000000] mb-4 p-4">
-    <div class="flex items-center justify-between cursor-pointer">
+    <div id="modul2Header" class="flex items-center justify-between cursor-pointer">
       <div class="flex items-center gap-4">
         <div class="bg-[#ef4444] text-white font-bold px-3 py-1 rounded-sm">2</div>
         <h3 class="font-bold text-[#0f172a]">HTML Fundamental</h3>
       </div>
-      <span>⌄</span>
+      <span id="modul2Icon" class="transform transition-transform duration-300">⌄</span>
+    </div>
+    <div id="modul2Content" class="mt-4 hidden"> <div class="grid grid-cols-[40px_1fr_80px] text-sm font-semibold text-gray-600 border-b pb-2">
+        <div>No.</div>
+        <div>Judul Materi</div>
+        <div>Durasi</div>
+      </div>
+      <div class="grid grid-cols-[40px_1fr_80px] py-3 border-b text-sm">
+        <div>1</div>
+        <div class="flex items-center gap-2"><span>▶️</span> <span>Struktur Dasar Dokumen HTML</span></div>
+        <div>10 menit</div>
+      </div>
+      <div class="grid grid-cols-[40px_1fr_80px] py-3 border-b text-sm">
+        <div>2</div>
+        <div class="flex items-center gap-2"><span>▶️</span> <span>Tag-tag HTML Umum (Heading, Paragraf, List)</span></div>
+        <div>20 menit</div>
+      </div>
+      <div class="grid grid-cols-[40px_1fr_80px] py-3 border-b text-sm">
+        <div>3</div>
+        <div class="flex items-center gap-2"><span>▶️</span> <span>Atribut pada Tag HTML</span></div>
+        <div>15 menit</div>
+      </div>
+      <div class="grid grid-cols-[40px_1fr_80px] py-3 text-sm">
+        <div>4</div>
+        <div class="flex items-center gap-2"><span>▶️</span> <span>Membuat Link dan Menyisipkan Gambar</span></div>
+        <div>20 menit</div>
+      </div>
     </div>
   </div>
 
-  <!-- Modul 3 -->
   <div class="border-2 border-black shadow-[4px_4px_0px_#000000] p-4">
-    <div class="flex items-center justify-between cursor-pointer">
+    <div id="modul3Header" class="flex items-center justify-between cursor-pointer">
       <div class="flex items-center gap-4">
         <div class="bg-[#ef4444] text-white font-bold px-3 py-1 rounded-sm">3</div>
         <h3 class="font-bold text-[#0f172a]">CSS Styling</h3>
       </div>
-      <span>⌄</span>
+      <span id="modul3Icon" class="transform transition-transform duration-300">⌄</span>
+    </div>
+    <div id="modul3Content" class="mt-4 hidden"> <div class="grid grid-cols-[40px_1fr_80px] text-sm font-semibold text-gray-600 border-b pb-2">
+        <div>No.</div>
+        <div>Judul Materi</div>
+        <div>Durasi</div>
+      </div>
+      <div class="grid grid-cols-[40px_1fr_80px] py-3 border-b text-sm">
+        <div>1</div>
+        <div class="flex items-center gap-2"><span>▶️</span> <span>Pengenalan CSS: Apa itu dan Cara Kerja</span></div>
+        <div>15 menit</div>
+      </div>
+      <div class="grid grid-cols-[40px_1fr_80px] py-3 border-b text-sm">
+        <div>2</div>
+        <div class="flex items-center gap-2"><span>▶️</span> <span>Selector CSS Dasar (ID, Class, Tag)</span></div>
+        <div>20 menit</div>
+      </div>
+      <div class="grid grid-cols-[40px_1fr_80px] py-3 border-b text-sm">
+        <div>3</div>
+        <div class="flex items-center gap-2"><span>▶️</span> <span>Properti CSS Umum (Warna, Font, Box Model)</span></div>
+        <div>25 menit</div>
+      </div>
+      <div class="grid grid-cols-[40px_1fr_80px] py-3 text-sm">
+        <div>4</div>
+        <div class="flex items-center gap-2"><span>▶️</span> <span>Layout dengan Flexbox</span></div>
+        <div>30 menit</div>
+      </div>
     </div>
   </div>
-</div>
 
 <div class="max-w-sm mx-auto mt-6 p-4 bg-gray-100 border-2 border-black shadow-lg">
   <!-- Foto dan latar merah -->
@@ -274,5 +314,31 @@
 
 </div>
 
+<script>
+  // Fungsi generik untuk handle toggle dropdown
+  function setupDropdown(headerId, contentId, iconId) {
+    const header = document.getElementById(headerId);
+    const content = document.getElementById(contentId);
+    const icon = document.getElementById(iconId);
+
+    if (header && content && icon) {
+      header.addEventListener('click', () => {
+        content.classList.toggle('hidden');
+        if (content.classList.contains('hidden')) {
+          icon.classList.remove('rotate-180');
+        } else {
+          icon.classList.add('rotate-180');
+        }
+      });
+    } else {
+      console.warn(`Element tidak ditemukan untuk: ${headerId}, ${contentId}, atau ${iconId}`);
+    }
+  }
+
+  // Setup dropdown untuk setiap modul
+  setupDropdown('modul1Header', 'modul1Content', 'modul1Icon');
+  setupDropdown('modul2Header', 'modul2Content', 'modul2Icon');
+  setupDropdown('modul3Header', 'modul3Content', 'modul3Icon');
+</script>
 </body>
 </html>

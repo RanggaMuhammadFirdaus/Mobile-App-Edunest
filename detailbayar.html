@@ -268,29 +268,34 @@
 
   // === Updated Loading Screen JavaScript ===
   const loadingOverlay = document.getElementById('loading-overlay');
-  const loadingCircle = document.getElementById('loading-circle'); // Ganti nama variabel dari loadingBall
+  const loadingCircle = document.getElementById('loading-circle');
   const konfirmasiBtn = document.getElementById('konfirmasiButton');
   const ewalletBtn = document.getElementById('ewalletButton');
   const destinationUrl = 'statusbayar.html'; 
 
   function showLoadingAndRedirect() {
-    // 1. Reset posisi bola, hapus transisi sementara, lalu tampilkan overlay
-    loadingCircle.style.transition = 'none'; // Nonaktifkan transisi untuk reset instan
-    loadingCircle.style.left = '4px';        // Kembalikan ke posisi awal (sesuai style inline awal)
-    
-    // Paksa browser melakukan reflow untuk memastikan reset posisi diterapkan
-    void loadingCircle.offsetWidth; 
-
-    loadingCircle.style.transition = 'left 1s ease-in-out'; // Aktifkan kembali transisi CSS
+    // 1. Tampilkan overlay terlebih dahulu
     loadingOverlay.classList.remove('hidden');
 
-    // 2. Mulai animasi dengan mengubah 'left' ke posisi akhir
-    // Posisi akhir disesuaikan dengan lebar bola dan padding bar
-    // (lebar bola w-4 = 16px, padding kiri dari style inline = 4px, jadi total 20px dari kiri ke kanan ujung bola)
-    loadingCircle.style.left = 'calc(100% - 20px)'; 
+    // 2. Reset posisi lingkaran ke awal TANPA transisi aktif
+    loadingCircle.style.transition = 'none'; // Matikan transisi sementara
+    loadingCircle.style.left = '4px';        // Set ke posisi awal
 
-    // 3. Atur timeout untuk pindah halaman setelah animasi (1 detik + sedikit buffer)
-    const redirectDelay = 1100; // Animasi 1000ms (1s), redirect setelah 1100ms
+    // 3. Paksa browser untuk "melihat" perubahan di atas (reflow)
+    // Ini penting agar browser mencatat posisi awal SEBELUM transisi dimulai.
+    void loadingCircle.offsetWidth; 
+
+    // 4. Gunakan setTimeout untuk menjalankan kode animasi di "tick" berikutnya.
+    // Ini memberi browser waktu untuk memproses langkah 1-3.
+    setTimeout(() => {
+      // Aktifkan kembali transisi CSS
+      loadingCircle.style.transition = 'left 1s ease-in-out';
+      // Setel ke posisi akhir untuk memulai animasi
+      loadingCircle.style.left = 'calc(100% - 20px)'; 
+    }, 10); // Delay kecil (misalnya 10ms) sudah cukup, bisa juga 0.
+
+    // 5. Atur timeout untuk pindah halaman setelah animasi selesai
+    const redirectDelay = 1100; // Durasi animasi 1000ms + buffer 100ms
     setTimeout(() => {
       window.location.href = destinationUrl;
     }, redirectDelay);
@@ -299,20 +304,16 @@
   if (konfirmasiBtn) {
     konfirmasiBtn.addEventListener('click', function(event) {
       event.preventDefault(); 
-      // Tutup popup bank dulu jika terbuka, baru tampilkan loading
-      closePopup(); // Asumsi fungsi ini menutup popup bank
-      // Beri sedikit waktu agar popup tertutup sebelum loading muncul
-      setTimeout(showLoadingAndRedirect, 350); // Sesuaikan delay jika perlu (animasi tutup popup 300ms)
+      closePopup(); 
+      setTimeout(showLoadingAndRedirect, 350); 
     });
   }
 
   if (ewalletBtn) {
     ewalletBtn.addEventListener('click', function(event) {
       event.preventDefault(); 
-      // Tutup popup e-wallet dulu jika terbuka, baru tampilkan loading
-      closeWalletPopup(); // Asumsi fungsi ini menutup popup e-wallet
-      // Beri sedikit waktu agar popup tertutup sebelum loading muncul
-      setTimeout(showLoadingAndRedirect, 350); // Sesuaikan delay jika perlu
+      closeWalletPopup(); 
+      setTimeout(showLoadingAndRedirect, 350); 
     });
   }
 </script>
