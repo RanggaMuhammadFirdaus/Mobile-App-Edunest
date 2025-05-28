@@ -23,6 +23,13 @@
     }
   </script>
 </head>
+
+<div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-90 flex justify-center items-center z-50 hidden">
+  <div class="w-64 h-4 bg-gray-200 rounded-full overflow-hidden border-2 border-black relative shadow-[4px_4px_0px_#000000]">
+    <div id="loading-ball" class="w-4 h-4 bg-[#34a397] rounded-full absolute top-0 left-0" style="height: calc(100% - 0px); width: 1rem;"></div>
+  </div>
+</div>
+
 <body class="bg-white text-black font-sans px-4 py-2 ">
 
     <!-- Header -->
@@ -87,7 +94,7 @@
         <input type="text" placeholder="123"
                class="w-full mt-1 px-4 py-2 border-2 border-black rounded-full shadow-[4px_4px_0px_#000000] placeholder-gray-400" />
       </div>
-      <button type="submit" onclick="window.location.href='statusbayar.html'; return false;"
+      <button type="submit" id="konfirmasiButton"
               class="w-full bg-[#34a397] text-black font-bold py-2 rounded-full border-2 border-black shadow-[4px_4px_0px_#000000]">
         Konfirmasi
       </button>
@@ -125,7 +132,7 @@
         <input type="text" placeholder="08xxxxxxxxxx"
                class="w-full px-4 py-2 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] placeholder-gray-400 focus:outline-none" />
       </div>
-      <button type="submit" onclick="window.location.href='statusbayar.html'; return false;"
+      <button type="submit" id="ewalletButton"
       class="w-full bg-[#2e8b75] text-white font-bold py-2 rounded-xl border-2 border-black shadow-[4px_4px_0px_#000000] ">
         Gunakan E-Wallet ini
       </button>
@@ -286,6 +293,54 @@ function openPopup() {
     if (!popupContent.contains(event.target)) {
       closeQrisPopup();
     }
+  }
+
+  const loadingOverlay = document.getElementById('loading-overlay');
+  const loadingBall = document.getElementById('loading-ball');
+  const konfirmasiBtn = document.getElementById('konfirmasiButton');
+  const ewalletBtn = document.getElementById('ewalletButton');
+  const destinationUrl = 'statusbayar.html'; // URL tujuan
+
+  function showLoadingAndRedirect() {
+    // 1. Tampilkan overlay loading
+    loadingOverlay.classList.remove('hidden');
+    loadingBall.style.left = '0%'; // Reset posisi bola
+
+    // 2. Animasikan bola ke kanan
+    // Kita gunakan requestAnimationFrame untuk animasi yang lebih smooth
+    // dan setTimeout untuk mengontrol durasi "loading"
+    let progress = 0;
+    const animationDuration = 1500; // Durasi animasi dalam milidetik (misal 1.5 detik)
+    const redirectDelay = animationDuration + 200; // Waktu sebelum redirect (beri sedikit jeda setelah animasi)
+
+    function animateBall() {
+      progress += 2; // Kecepatan pergerakan bola, sesuaikan jika perlu
+      loadingBall.style.left = Math.min(progress, 92) + '%'; // 92% agar bola tidak keluar dari bar
+
+      if (progress < 92) {
+        requestAnimationFrame(animateBall);
+      }
+    }
+    requestAnimationFrame(animateBall);
+
+    // 3. Atur timeout untuk pindah halaman
+    setTimeout(() => {
+      window.location.href = destinationUrl;
+    }, redirectDelay);
+  }
+
+  if (konfirmasiBtn) {
+    konfirmasiBtn.addEventListener('click', function(event) {
+      event.preventDefault(); // Mencegah aksi default tombol jika ada
+      showLoadingAndRedirect();
+    });
+  }
+
+  if (ewalletBtn) {
+    ewalletBtn.addEventListener('click', function(event) {
+      event.preventDefault(); // Mencegah aksi default tombol jika ada
+      showLoadingAndRedirect();
+    });
   }
 </script>
 </body>
