@@ -124,34 +124,38 @@
   </div>
 </div>
 
-<!-- Bottom Nav -->
-<div class="fixed bottom-0 left-0 w-full bg-white border-t border-black flex justify-around py-2 shadow-inner z-50">
-
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around items-center h-20 shadow-inner z-50">
   <!-- Beranda -->
-  <button class="flex flex-col items-center bg-[#ef4444] text-black font-medium px-6 rounded-full shadow-[2px_2px_0px_0px_black] border-2 border-black -mt-1">
+  <button onclick="navigateTo('home.html')" id="btn-beranda"
+    class="transition-transform duration-150 active:scale-90 flex flex-col items-center text-black font-medium px-6 py-2 rounded-full border-2 border-transparent">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9v8a2 2 0 01-2 2h-4v-6H9v6H5a2 2 0 01-2-2z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M3 12l9-9 9 9v8a2 2 0 01-2 2h-4v-6H9v6H5a2 2 0 01-2-2z" />
     </svg>
     <span class="text-sm">Beranda</span>
   </button>
 
   <!-- Kelas -->
-  <button class="flex flex-col items-center text-black">
+  <button onclick="navigateTo('detailclass.html')" id="btn-kelas"
+    class="transition-transform duration-150 active:scale-90 flex flex-col items-center text-black font-medium px-6 py-2 rounded-full border-2 border-transparent">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 20h9M12 4h9M4 8h16M4 16h16" />
+        d="M12 20h9M12 4h9M4 8h16M4 16h16" />
     </svg>
     <span class="text-sm">Kelas</span>
   </button>
 
   <!-- Profil -->
-  <button class="flex flex-col items-center text-black">
+  <button onclick="navigateTo('profile.html')" id="btn-profil"
+    class="transition-transform duration-150 active:scale-90 flex flex-col items-center text-black font-medium px-6 py-2 rounded-full border-2 border-transparent">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+      <path
+        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
     </svg>
     <span class="text-sm">Profil</span>
   </button>
-
+</div>
 </div>
 
 
@@ -161,6 +165,10 @@
       // btn.textContent = btn.textContent === "❤️" ? "💔" : "❤️";
     });
   });
+
+  function navigateTo(pageUrl) {
+    window.location.href = pageUrl;
+  }
 </script>
 </body>
 </html>
