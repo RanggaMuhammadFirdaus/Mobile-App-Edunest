@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Online Training</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+
+  <div class="min-h-screen px-4 py-5 font-sans">
+    <!-- Header -->
+    <div class="bg-purple-500 rounded-xl p-4 text-white mb-4 relative">
+      <div class="text-xl font-bold leading-tight">ONLINE<br>TRAINING</div>
+      <div class="text-sm mt-1">Pembelajaran personal/software</div>
+      <div class="absolute top-2 right-2 w-6 h-6 border-2 border-black rounded-full"></div>
+    </div>
+
+    <!-- Statistik -->
+    <div class="grid grid-cols-2 gap-3 mb-6">
+      <div class="bg-pink-300 p-3 rounded-xl shadow border border-black">
+        <p class="text-sm font-semibold">📱</p>
+        <p class="text-lg font-bold">4</p>
+        <p class="text-xs">Kelas</p>
+      </div>
+      <div class="bg-cyan-300 p-3 rounded-xl shadow border border-black">
+        <p class="text-sm font-semibold">📈</p>
+        <p class="text-lg font-bold">66%</p>
+        <p class="text-xs">Progress</p>
+      </div>
+      <div class="bg-green-300 p-3 rounded-xl shadow border border-black">
+        <p class="text-sm font-semibold">⏱</p>
+        <p class="text-lg font-bold">143</p>
+        <p class="text-xs">Jam</p>
+      </div>
+      <div class="bg-orange-300 p-3 rounded-xl shadow border border-black">
+        <p class="text-sm font-semibold">👨‍🏫</p>
+        <p class="text-lg font-bold">3</p>
+        <p class="text-xs">Mentor</p>
+      </div>
+    </div>
+
+    <!-- Section: Kelasm -->
+    <div class="text-black text-lg font-bold mb-2">KELASMU</div>
+
+    <!-- Card Kelas -->
+<div class="space-y-4">
+  <!-- Kelas: Web Pemula -->
+  <div class="border border-black p-3 rounded-xl shadow relative">
+    <div class="flex justify-between items-start mb-2">
+      <div>
+        <h3 class="font-bold">Web Pemula</h3>
+        <p class="text-xs text-gray-600">Belajar dasar - dasar HTML, CSS, and Javascript</p>
+      </div>
+      <div class="flex flex-col items-end gap-1">
+        <span class="bg-yellow-400 text-black text-xs px-2 py-0.5 rounded-full font-semibold">AKTIF</span>
+        <a href="web-pemula.html" class="text-black text-lg hover:text-blue-600">→</a>
+      </div>
+    </div>
+    <div class="text-xs text-gray-500 mb-1">PROGRESS</div>
+    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-1">
+      <div class="bg-blue-600 h-2.5 rounded-full w-[65%]"></div>
+    </div>
+    <div class="flex justify-between text-[10px] text-gray-500">
+      <span>7/10</span>
+      <span>65%</span>
+      <span>3 minggu</span>
+    </div>
+  </div>
+
+  <!-- Kelas: Python Dasar -->
+  <div class="border border-black p-3 rounded-xl shadow relative">
+    <div class="flex justify-between items-start mb-2">
+      <div>
+        <h3 class="font-bold">Python Dasar</h3>
+        <p class="text-xs text-gray-600">Pemrograman Python untuk pemula sampai ke analisis data sederhana</p>
+      </div>
+      <div class="flex flex-col items-end gap-1">
+        <span class="bg-yellow-400 text-black text-xs px-2 py-0.5 rounded-full font-semibold">AKTIF</span>
+        <a href="python-dasar.html" class="text-black text-lg hover:text-blue-600">→</a>
+      </div>
+    </div>
+    <div class="text-xs text-gray-500 mb-1">PROGRESS</div>
+    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-1">
+      <div class="bg-blue-600 h-2.5 rounded-full w-[75%]"></div>
+    </div>
+    <div class="flex justify-between text-[10px] text-gray-500">
+      <span>6/8</span>
+      <span>75%</span>
+      <span>1 minggu</span>
+    </div>
+  </div>
+
+  <!-- Kelas: UI/UX Figma -->
+  <div class="border border-black p-3 rounded-xl shadow relative">
+    <div class="flex justify-between items-start mb-2">
+      <div>
+        <h3 class="font-bold">UI/UX Figma</h3>
+        <p class="text-xs text-gray-600">Pelajari dasar desain UI/UX menggunakan figma untuk web & mobile</p>
+      </div>
+      <div class="flex flex-col items-end gap-1">
+        <span class="bg-green-400 text-black text-xs px-2 py-0.5 rounded-full font-semibold">COMPLETED</span>
+        <a href="uiux-figma.html" class="text-black text-lg hover:text-blue-600">→</a>
+      </div>
+    </div>
+    <div class="text-xs text-gray-500 mb-1">PROGRESS</div>
+    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-1">
+      <div class="bg-green-600 h-2.5 rounded-full w-full"></div>
+    </div>
+    <div class="flex justify-between text-[10px] text-gray-500">
+      <span>10/10</span>
+      <span>100%</span>
+      <span>Selesai</span>
+    </div>
+  </div>
+
+  <!-- Kelas: ML Dasar -->
+  <div class="border border-black p-3 rounded-xl shadow relative">
+    <div class="flex justify-between items-start mb-2">
+      <div>
+        <h3 class="font-bold">ML Dasar</h3>
+        <p class="text-xs text-gray-600">Konsep dasar dan praktik dasar machine learning</p>
+      </div>
+      <div class="flex flex-col items-end gap-1">
+        <span class="bg-yellow-400 text-black text-xs px-2 py-0.5 rounded-full font-semibold">AKTIF</span>
+        <a href="ml-dasar.html" class="text-black text-lg hover:text-blue-600">→</a>
+      </div>
+    </div>
+    <div class="text-xs text-gray-500 mb-1">PROGRESS</div>
+    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-1">
+      <div class="bg-blue-600 h-2.5 rounded-full w-[40%]"></div>
+    </div>
+    <div class="flex justify-between text-[10px] text-gray-500">
+      <span>4/10</span>
+      <span>40%</span>
+      <span>2 minggu</span>
+    </div>
+  </div>
+</div>
+  </div>
+
+</body>
+</html>
